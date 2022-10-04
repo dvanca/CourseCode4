@@ -16,8 +16,8 @@ public class Main {
         System.out.println(grades);
 
         Classroom classroom = new Classroom(grades);
-        System.out.println(classroom.getGradesForDiscipline("Computer Science"));
-        System.out.println(classroom.getGradesForStudent("Gasparo Sava"));
+        System.out.println("All grades for Computer Science - " + classroom.getGradesForDiscipline("Computer Science"));
+        System.out.println("Grades for Gasparo Sava - " + classroom.getGradesForStudent("Gasparo Sava"));
         System.out.println(classroom.getMaxGrade("Mathematics"));
         System.out.println(classroom.getMaxGrade());
         System.out.println(classroom.getAverageGrade("Mathematics"));
