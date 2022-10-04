@@ -1,3 +1,5 @@
+package org.fasttrackit.hw.ex1;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,6 +22,10 @@ public class Main {
         System.out.println(classroom.getMaxGrade());
         System.out.println(classroom.getAverageGrade("Mathematics"));
         System.out.println(classroom.getWorstGrade("Computer Science"));
+
+        ReportGenerator raport = new ReportGenerator(grades);
+        raport.generateReport();
+
     }
     private static StudentGrade readStudentGradeFromLine(String line) {
         String[] components = line.split("\\|");

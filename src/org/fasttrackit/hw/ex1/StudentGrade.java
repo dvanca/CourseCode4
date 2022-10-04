@@ -1,3 +1,5 @@
+package org.fasttrackit.hw.ex1;
+
 public class StudentGrade {
     private final String name;
     private final String discipline;
@@ -24,7 +26,7 @@ public class StudentGrade {
 
     @Override
     public String toString() {
-        return "StudentGrade{" +
+        return "{" +
                 "name='" + name + '\'' +
                 ", discipline='" + discipline + '\'' +
                 ", grade=" + grade +

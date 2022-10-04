@@ -1,6 +1,5 @@
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+package org.fasttrackit.hw.ex1;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,6 +70,16 @@ public class Classroom {
         return averagegrade;
     }
 
+    public Double getAverageGrade(){
+        double averagegrade=0;
+        int i=0;
+        for(StudentGrade student : grades){
+                averagegrade = averagegrade + student.getGrade();
+        }
+        averagegrade = averagegrade / grades.size();
+        return averagegrade;
+    }
+
     public StudentGrade getWorstGrade(String discipline){
         StudentGrade worstGradeStudent = null;
         int worstGrade=100;
@@ -87,7 +96,7 @@ public class Classroom {
 
     @Override
     public String toString() {
-        return "Classroom{" +
+        return "org.fasttrackit.hw.ex1.Classroom{" +
                 "grades=" + grades +
                 '}';
     }
