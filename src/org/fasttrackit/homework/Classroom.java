@@ -1,7 +1,9 @@
 package org.fasttrackit.homework;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Classroom {
 
@@ -17,6 +19,17 @@ public class Classroom {
             if (discipline == null || studentGrade.getDiscipline().equals(discipline)) {
                 result.add(studentGrade.getGrade());
             }
+        }
+        return result;
+    }
+
+    public Map<String,List<Integer>> getGradesGroupByDiscipline(){
+        Map<String ,List<Integer>> result = new HashMap<>();
+        for(StudentGrade studentGrade : grades){
+            if(!result.containsKey(studentGrade.getDiscipline())){
+                result.put(studentGrade.getDiscipline(), new ArrayList<>());
+            }
+            result.get(studentGrade.getDiscipline()).add(studentGrade.getGrade());
         }
         return result;
     }
